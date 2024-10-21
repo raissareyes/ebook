@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraBooks</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu">
+        <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+      </label>
+      <ul class="lista-menu">
+        <li class="lista-menu__titulo">Categorias</li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Romance</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Terror</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Comédia</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Drama</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Design & UX</a>
+        </li>
+      </ul>
+      <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
+    </div>
+    <div class="container">
+      <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
+      <a href="#"><img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem"></a>
+      <a href="#"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem"></a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__titulo">Raissa Books</h2>
+    <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+    <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Novos lançamentos</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR08KgIBUgdnxB8iVKXRn5fCkdi8PBevY1QxDpckm-swmjlePSvHeNtc330sYFsBBUntwE&usqp=CAU"
+            alt="Livro sobre apache kafka e spring boot da alura books"></div>
+        <div class="swiper-slide"><img src="https://books.google.com.br/books/publisher/content?id=UhHpDQAAQBAJ&hl=pt-BR&pg=PA1&img=1&zoom=3&bul=1&sig=ACfU3U07cIjgQUo975dnKrQeIa9R-ZJ3SA&w=1280"
+            alt="Livro sobre liderança em design design da alura books"></div>
+        <div class="swiper-slide"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALcAeAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAIEBQYBB//EADoQAAIBAwIEBAMGBAYDAQAAAAECAwAEERIhBTFBUQYTImEycZEUgaGxwfAjQmLhFTM0UnLRJYLxJP/EABoBAAIDAQEAAAAAAAAAAAAAAAECAwQFAAb/xAApEQACAgIBAwMDBQEAAAAAAAAAAQIRAyESBDFBIlFxBRNhIzJC0fAU/9oADAMBAAIRAxEAPwDQRFRnB3NEAXTtuc7VAVW5qakw5BGQWOOQrYaMZMfISRg9aGw235UVm5g00YPMmuACJcDUozvyoyaWUbYppOnlQ9bZO/PpXHdghZUyANqYLhc4xj3obHOc0MrRSOsMXAO25okQaQbjFR419QqanLlQZyHKvpx1pYCKXY6e1JQc8jzp7jUCrj7qWxhjFiFK71wsQuDRCdKYAwKjnJNcjmN1ADsaVOMYPOlTAEoAU743FSLYRrOryMFWMhsZ+L2FRkXZeYPXsalmVEsGRSfMeUM238oGwz8zSyDE55qPbsshxJJJlj298/p7mjiS0a81sqiMKAAR3O/0BP0qNLcRB3aMA6YyqZUd9vvwfwonnW5sViQ4lIUO+ncZJLfTCj7zSNDJkKQBmJGw547UzOeVFuiHuZPLU+Xk6cEYxQ/LOP71IiM7gYoTNTipIGfpiuYOcHkKIB0Y9QJqbbSeVJr9RwOSnB71GAJAOMAUeMr5Emob6gAevXOPwoMZBo5V/wDzBwwCPl8Dmc8/pgfdXDIArjGS77n2p7CFJSPQVjTofjOMZ+u9M0qVjQKC77sQeQzgD9aQk2EM6eZKx31LpTb4R+8CohwTjrUxYI3uJQ+UiQnA5FjjYc/aoUiqsSMGOWLdegx/3RiKzpAxSpinSMtXaYUbr+EgbUxiw2A9IPKh27GWMgbgDNE5nUcgKOVGgJ2ILpHq1UxpUXoa5IdTZEuwPWhOzNJpZsq1FIDYWY+YqmJtPz2oN7eCztpJm38teXemtp0elwyg4xVT4ljmvuDz29uF1EerUdwo3OPfai1SsEXbSMtxTxRdtd+U1zMFO58p9IHLlg/vej8N8U31t61mM6D4kmOdR7Z5/Ss/xe48Ps8UfCLdhDEuDK+ovO3Vjnl7CqoyiWQLbqELNgHsapfdaZprBGux7zZ3SXttFcQ4KSqGUijqQeu/Ks94ZiPCbGK0ll84gliQMAE8wPar1XTVk4y3TtVqnWzPtXoLj0j5U3152YiurJqbSB15mkzBWFAIwht8700A9RT5GxUd5G701AbC41bUqA1zgBcczzpUaYtohWkpUEA4+6pEs5eIknGd6rIZ1ZNHftRXdSpOcH55xUjjsrxyKgySgKepp8UiaACem9RySseABnqajCfEhU4I2G3MUeNh5pdw8CJbuVU5DNnJ60ziOqW3nigl8uVlIR1/lPSqq+4t9lm8ry/Nc+oHOAoqsuON3G+jy098ZoSkvI8IzdUjDXIFuv2OS3EdxDIRJJqOfljl94o1vG9/dW9raQpC7kIG1H1N/uJJ237UPjExuOKXE5cMXYEkY3OB2pthK9vdRzRMVeNgynsayf5Ub2+F+T2S0t1treCDW8hiAHmOfUfc1MEgj1Nq58zWOh4xdaEYynUR2G9Tk8QSAYnjSQHv6eVafJUYnCVmvgJZACxX9a5MxGAozg4+VQOFcRj4lbmWI4KnBUnl/wDalvk49XLn70AvWhryMBvmgtKSKdI2FYg1DZ8jOetOkRzlQp5zGd9jSqNfuAc0qlUNFOeZplXHceWQVGW5CrLzFjwrHV1233qh83QamLO8ikg6T1xUrjZFFuC0Wu/+azjOcjPQUF3RYx6zrIyTUUSF0AJ2B3oTyZIHRRgUqidLIU3GZ2F/KQAfQoO/51VzzZVS7aTj4OtE4xK3+KzKDjVgfLaq+XZOW5GAW2I71m5Z+pnoOnx+iJWXDa7lj3rkbYzp5k4yaUigAEZz+tKJfXvVLyaXgurGZlhU9F5YPKraGVZEGWzqB9JrNxSFJtSekEip0c8iRZ5j271ZhPwU8mO3aNd4anlgumhBAibfT8uVaU3LFTheu1ZngnDbiG1PEVGYUClyq7Lr+EZPWp0l4dIVDt1zVzppRzQ5RMzr4ZOly8Mmm1ZMe8lKspAHzFRRP69+9R/OzTC2+c1bUDLllbJd+2cYOc0qjTSFwCaVOlSI5Pk7Kw5J5VMhdV9OOXPNAj+P50Qttvsa4ll7BTI2nbah5yabnrSVgH+VERIzHEG/8pe5LekjGncjarbxtaWtta29xZRJCkzTJCI2JEsS6AknuSS2/XFU628/EePXMFpEZp5JWCRrzbSOn0NQJILgW8ziCZo4SqyERtpiPZttjnvisDLL1P5PXYI1jj8I2dxw/gc3GLK1srLGOKwpclhqGAh1RqOqnSG+bEdKh8O4dZz8C4he31qiXtubuURtEIvQI0UDR00uykActRrNWfD+JXfDp7y1Vnt4JMyESjIYKTnGckgZOR0zXWseIPcGMJI0r2/2jBlB1REZ1c99hnHPb2quTUbDh3ArK/4u9pdwpE1va2EaeWBGHkkCsxcDmW3X7/ao32G0bhHFbxIsJ5koicMdMZEiBUHTJBbnvgVmJLHiYntcQ3TveIHt1UFmmUHYqAcnGNvwo6cP4iLkWJtrgSugnSHfJUrnVj/jn7qeL2Bxs9J4Xf20fgebh8hlSZ/JliZPhfCgFW/OqfXnO9ZHhl1KeJW0fmuU3AXWdOMdK1AbPOtL6ZB48Ti35Mr69OGXqFOKrS/o7I5Ubd6ek4b9KCxyCK5Bs41CtFsxljTg37E1qVcJyKVEr0RFPqpzNmmBRnJrj7CgWeNsIppfzE0NGDKGUgj2rpJAJ7b0L0dx3RQ+GbuK38VJNd3C28JeYPK3JNSOAT/7EVcXXiPhs1l4iWO4ZDczTvFGUObgOqIp5bYKs2/KscH2L9Sc/XeptvwG6nveGW4eEG/hM0ZYnAUFsg4HP0GvOz7nrorQ6zv2h8JX1pBceXJJeRl0U4MsZRgR8sgfWpg8h+JXF1FewPBacNWFXzgu5t/KCqpALes8wMAbnao1l4ee4Fon2qGOS6tJbwIyk6ETWeY6kRsfpSbw/fQRcIklEQbirj7PEW9WDgKT0wdQpAlpeeJrdL3h91YxustlFLFFzG7QBFbc7YYZwO1To/E9unFLfid6ftt3Pw6COWXP+WwkJkzjHq0qMD3xyNZ9vDHE2ueI2cKRSz8PZVkCS7yas40Z+LYZxz+dMtOCXk3B34suj7MmW0k4dkDBC6jsGYA/OjQANhoXjNsYxiMsdAPbfH4YrVsegrI2f+us8/EJBvWrzvWt0D9DRjfUo/qR+DuSCKOCNuVR66rnVjG2cZq6vyZ+WKf7STqpUM9K7TFbiMz05VPbw5xa/s45rFLJ4X5tLeIhxncYPX51Wkn/AGmulmBJ8pSoHPVufwqLJco0nRcx1CSbVjmDRTyQy6VmB3TUDy25g4O46U2dtMLn+k1E4iXFu82jSbc+Yp1DkOY+VP4hMVtJWVCRoPIjbalc6TXsMsfKUWvLMhGQygYOw5Cruz8QWtrdcDuZYZ5G4dbyQPGNID514IOe78sdKpI+eOmSD3pki6NLdRkYNYTPS0aKz4zZWdtweJtc4gsbuOYou4eYOqpvjIXUCfmcV1vEkct9ZXyQMbqxEa24kYYKiEIckdnXUv8AyOazB9On+rfbpTkk0k53pTqNfZeLbeG7ur66sZZbiZbSRAkgCmaAYy3UKSAcDfp1zUNPEB/wKThzwZmKNH5wfC+W0olYBccyQBz5VnjunX0kcvenRyAuSRz6fv7qNI6iRCWHEbQkEZlT861vWsjb+q7tDnJWZVJPfIrVgS629aEdBp5fjWl0TqLM3rocnE7JMqELgs7clXnUq34VJewhhxqwsGB+CdXZmPfYYxVXw2WW5mupwygK/lINPRfv9zU7S2S2pcHl6eX41b3ljaZnusMqpMJKhhkMbXEM+nbzYdWlvcagDSofqHX8K5UybSoruKk77HAG/mYZ9hTtLbHzDjtt/wBVzSwPxZ+6uerHxc/alJ+N9iPxMSGwuQGJ/hNsF9qBM7PwkOXUq0QIwv8ATRuIll4fcnUciJumOlQpsLwWLDtvAu2faquV+p/Bcw47ir9yhQEKZB0JOf38xR7eymv0PkBdmx6mwWPt3qLuYlXbG9arg9tE3D7IJNAWnyGBOPKOQPVttzzms3HFSdM08kuMbRlrqCS2kVZ4yuBt2b3FMiiaVgqLlic8ulXHieJEuIgrKVUFMqdtsfhUPg+ftEq6d9HX2/YoSglPiGMrhyOLw65GpkQPpP8AKc/v5VDcZdichgeWOtbKG1AhR1yhKgt2zj86z3HoVg4lMgB+FTudwafJi4qxMeXm6Itp/qLcdp0/OtfIq6CSWAQE7Oax0PpuYycbTKfof71qrswJbXB/h6irZ3GScGp+ldRZF1KuSG8Dj08Oic51Ses4Pfep5TBJ1Mc/1VA4UUbhlthtwgzhsVMJQEZYDP8AVV/E0saRl5ov7jf5E0YZlYs3p32NKmkoT8X0elRdAcHrZAkv7NCMznHsxP600cVsQu0z777lqzpYlN1OfnQ2bK4wdqzH1M0bP/NA0F5xCzltZgkhLGNlGSeoqLNeQ/4VFGAuvy1Q7b8qpCciuA7Ab1FLPKQ8cUY9g6NhcgY2NT+G8Sa3BgfJQnnj4e9VyECEZ70bh0X2i/t4uYaQavl1pINp6Hmlx2P4hLcS3TC5LD1+lTyA9qBFLNBP5sbFHXkwrcXsC3Fo8ZTVlMgY5HcjFZHhUSy3Zdt44lLsT06A/lUmTE4SX5IsWZTi9GpF9EttFNcSiMMPUD0Pb86yd9cC5u55hn1tsD2rRraJc2jspHqB07ZyM/sVlSMFttznNNmlKlYuCMVdHZG0sD/UT+NXdzxqJ7WWNVbLoQD7kVQ3GCqkHmTQTUMcsoXRNKEZVZoLLi8cNrDCINTKoUnarXil9HaJGTb49RHLG3esdCSJE5fEPzrQ+JZklSAjBIZtywPbsTVjHml9t77FTLjj96Cr3CR8YtygZo2Ge4FdqhZi4CKQMc6VBdRMneCAxlw7ZJyW2pOBqwhznn7U4gliSCc8ielM8ohj6hj2NQMnBupU47Uwe1GIbQ7Z2xTZ4jHp7EZqNo47khEAPTOMVP4AmeKRbbqrN+n61Xpk/dR7OWWC8VoThyQB9RTwdSTYs1cWkbxjpb0jPq2+5azNxBFbW8jxH+HeyxeWp5hc5I+tXXELnTb3Hl7SwxeZqz1IP/VYyJgZYz0Vh+lXOomtIqdPje2bm3wgUAAADkOlYq7XyrqeMHYOw+hNaUXnlQrcFSyYySP33rLTyeZdSyf7iWx86jzyTSSJcMWm2Mn3J+dBokoIIz0pjVUZYHwf5i9wQRV/4ic+XGH1epidznOw/tVBggjb6V13kbBkZmx3bNPGVRaIpY7mpew+LdtXUA0qamxBpVy7EoVcHIJ2HKmK+kZB58tq7SonAnkLLjO1NZiVwScClSqM4eh9OO/Wjxv/AB43C8iDt7UqVFPZ3gtZ+KxSG/1I+J4lSPAG2F67+9VBKswzlf8Aj02/tSpU8pOXcWMVFa/2iwk4oJeHRWixFVVQHbO5wc1XH5DYZpUqDk5dwxil2Gz7qD1oBrtKlYw9SSQKIMklSFyDzrtKjEA8jU4CgYHOlSpUwD//2Q==" alt="Livro sobre javascript assertivo da alura books">
+        </div>
+        <div class="swiper-slide">
+          <img src="data:image/jpeg;base64,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" alt="Livro Guia front end" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Portugol.svg" alt="Livro sobre portugol" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Acessibilidade.svg" alt="Livro sobre acessibilidade" />
+        </div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+    <div class="card">
+      <div class="card__descrição">
+        <div class="descrição">
+          <h3 class="descrição__titulo">Talvez você também se interesse por...</h3>
+          <h2 class="descrição__titulo-livro">Angular 11 e Firebase</h2>
+          <p class="descrição__texto">
+            Construindo uma aplicação integrada com a plataforma do Google.
+          </p>
+        </div>
+        <img src="img/Angular.svg" class="descrição__imagem" />
+      </div>
+      <div class="card__botões">
+        <ul class="botões">
+          <li class="botões__item">
+            <img src="img/Favoritos.svg" alt="Favoritar livro" />
+          </li>
+          <li class="botões__item">
+            <img src="img/Compras.svg" alt="Adicionar no carrinho de compras" />
+          </li>
+        </ul>
+        <a href="#" class="botões__ancora">Saiba mais</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class=”carrossel”>
+    <h2 class="carrossel__titulo">Mais vendidos</h2>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="img/ApacheKafka.svg"
+            alt="Livro sobre apache kafka e spring boot da alura books"></div>
+        <div class="swiper-slide"><img src="img/Liderança.svg" alt="Livro sobre liderança em design da alura books">
+        </div>
+        <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks">
+        </div>
+        <div class="swiper-slide"><img src="img/Guia Front-end.svg" alt="Livro Guia front end"></div>
+        <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol"></div>
+        <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="livro sobre acessibilidade"></div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="card">
+      <!-- 1º linha -->
+      <div class="card__descrição">
+        <!-- 1º coluna -->
+        <div class="descrição">
+          <img src="img/Estrelinhas.svg" alt="Avaliação 5 estrelas">
+          <h3 class="descrição__titulo">Autora do Mês</h3>
+          <h2 class="descrição__titulo-livro">Juliana Agarikov</h2>
+          <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.
+          </p>
+        </div>
+        <!-- 2º coluna -->
+        <img src="img/Escritora.svg" class="descrição__imagem">
+      </div>
+
+      <!-- 2º linha -->
+      <div class="card__botões">
+        <!-- 1º coluna -->
+        <ul class="botões">
+          <li class="botões__item"><img src="img/Favoritos.svg" alt="Favoritar livro"></li>
+          <li class="botões__item"><img src="img/Compras.svg" alt="Adicionar no carrinho de compras"></li>
+        </ul>
+        <!-- 2º coluna -->
+        <a href="#" class="botões__ancora">Saiba mais</a>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="tópicos">
+    <h2 class="tópicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
+    <ul class="tópicos__lista">
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Android</a></li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Marketing Digital</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Agile</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Startups</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">HTML & CSS</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Python</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">OO</a>
+      </li>
+      <li class="tópicos__item">
+        <a href="#" class="tópicos__link">Java</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contato">
+    <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+    <p class="contato__texto">
+      Atualizações de e-books, novos livros, promoções e outros.
+    </p>
+    <input type="email" placeholder="Cadastre seu e-mail" class="contato__email" />
+  </section>
+
+  <hr />
+
+  <footer class="rodapé">
+    <h2 class="rodapé__titulo">Grupo Alura</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      },
+    });
+  </script>
+</body>
+
+</html>
